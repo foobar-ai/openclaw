@@ -28,7 +28,7 @@ RUN OPENCLAW_A2UI_SKIP_MISSING=1 pnpm build
 # Force pnpm for UI build (Bun may fail on ARM/Synology architectures)
 ENV OPENCLAW_PREFER_PNPM=1
 RUN pnpm ui:build
-
+EXPOSE 8080
 ENV NODE_ENV=production
 
 # Security hardening: Run as non-root user
